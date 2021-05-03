@@ -22,7 +22,9 @@ ol, ul {
 header{
     height: 72px;
     line-height: 70px;
+    min-width: 1152px;
 }
+
 
 header .navbar{
     max-width: 1366px;
@@ -30,9 +32,18 @@ header .navbar{
     margin: 0 auto;
 }
 
+.container1>div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .logo{
     height: 72px;
+    /* width: 200px; */
 }
+
 
 .navbar-brand{
     height: 100%;
@@ -53,8 +64,10 @@ header .navbar{
 
 .nav1{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    height: 72px;
+    width: 620px;
 }
 
 .nav1 li{
@@ -64,6 +77,19 @@ header .navbar{
 .nav1 li a{
     color: #545C63;
     font-size: 16px;
+}
+
+.nav2{
+    width: 410px;
+    justify-content: flex-end;
+}
+
+.nav2 li{
+    margin: 0 10px;
+}
+
+.nav2 li:hover>a{
+    color: #f20d0d;
 }
 
 .collection{
@@ -93,6 +119,8 @@ header .navbar{
 
 .search{
     position:relative;
+    height: 72px;
+    width: 300px;
 }
 
 .search input{
@@ -133,14 +161,14 @@ header .navbar{
 }
 
 .cart-box{
-    display: none;
+    display: none; 
     position: absolute;
     top: 72px;
     background-color: #fff;
     width: 350px;
     z-index: 1000;
     box-shadow: 0 8px 16px 0 rgb(28 31 33 / 20%);
-    right: 196px;
+    right: 138px;
     padding: 20px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -956,27 +984,35 @@ aside{
 
 .AppDownLoad,.WeiXinGF{
     background-image: url(../img/elevator.png);
-    transition: all 1s;
-    background-position: 0 -222px;
+    transition: all .2s;
     background-repeat: no-repeat;
     position: absolute;
-    left: -216px;
-    top: -168px;
-    display: none;
+    background-size: 100%;
+    transform-origin: right bottom;
+    transform: scale(0.1);
+    left: -196px;
+    top: -162px;
+    opacity: 0;
     width: 172px;
     height: 212px;
 }
 
 .WeiXinGF{
-    background-position: 0 0;
+    background-position: 0 5px;
+}
+
+.AppDownLoad{
+    background-position: 0 -210px;
 }
 
 .rightAside li:hover>a>.AppDownLoad{
-    display: block;
+    opacity: 1;
+    transform: scale(1);
 }
 
 .rightAside li:hover>a>.WeiXinGF{
-    display: block;
+    opacity: 1;
+    transform: scale(1);
 }
 
 .toTop{
@@ -985,7 +1021,6 @@ aside{
 
 .bgNew{
     margin-top: 32px;
-    /* height: 698px; */
     background-color: #f5f7fa;
 }
 

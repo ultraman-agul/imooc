@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_2493535_o0hbx0j1kpj.css">
+    <link rel="stylesheet" href="./css/shoppingCart.css">
+</head>
+
+<body>
+    <!-- 弹出层和弹出框 -->
+    <div id="popLayer">
+    </div>
+    <!-- 登录 -->
+    <div id="popBox">
+        <div class="loginMethods">
+            <span class='zhanghao denglu activeLogin'>账号登陆</span>
+            <span class='yzm denglu'>验证码登录</span>
+            <span class="glyphicon glyphicon-remove closeBox"></span>
+        </div>
+        <div>
+            <div class="input-items">
+                <form action="">
+                    <div class="zh">
+                        <div class="inputItem">
+                            <input type="text" required
+                                pattern="^\d{11}$|^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$" id='emailPhoneNum'
+                                class="form-control loginput" placeholder="请输入登录手机号/邮箱" style='padding-left: 20px;'>
+                            <p class='validity'>请输入正确的邮箱或手机号</p>
+                        </div>
+                        <div class="inputItem">
+                            <input type="password" required pattern="^\S{8,20}$" id="psw1"
+                                class="form-control loginput yzminput pswInput" placeholder="请输入密码">
+                            <a href="" class='iconfont icon-yanjing-guan getMa see'></a>
+                            <p class='validity'>请输入8-20位密码，区分大小写，不能使用空格！</p>
+                        </div>
+                        <div class="inputItem autoLG">
+                            <label for="autoLogin" class='autoLogin'>
+                                <input type="checkbox" name="" class="autoLogin1">7天内自动登录</label>
+                            <a href="">找回账号</a>
+                        </div>
+                        <div class="inputItem">
+                            <input type="submit" value="登录" id='loginBtn1' class='loginBtn' />
+                        </div>
+                    </div>
+                </form>
+
+                <form action="">
+                    <div class="yz">
+                        <div class="inputItem">
+                            <span class='leftspan'>+86</span>
+                            <input type="tel" pattern="^\d{11}$" required id="phoneNum" class="form-control loginput"
+                                placeholder="短信登陆仅限中国大陆用户">
+                            <p class='validity'>请输入正确的手机号</p>
+                        </div>
+                        <div class="inputItem">
+                            <input type="text" class="form-control loginput yzminput" id="yzm" pattern="^[a-z0-9]{4}$"
+                                placeholder="请输入短信验证码">
+                            <a href="" class='getMa'>获取验证码</a>
+                            <p class='validity'>请输入正确验证码</p>
+                        </div>
+                        <div class="inputItem autoLG">
+                            <label for="autoLogin" class='autoLogin'>
+                                <input type="checkbox" name="" class="autoLogin1">7天内自动登录</label>
+                            <a href="">找回账号</a>
+                        </div>
+
+                        <div class="inputItem">
+                            <input type="submit" value="登录" id='loginBtn2' class='loginBtn' />
+                        </div>
+                    </div>
+
+                </form>
+
+                <div class="loginfooter">
+                    <a class="quickLg">
+                        快速注册
+                    </a>
+                    <span>
+                        其他方式登录
+                    </span>
+                    <div class="lgmd">
+                        <a href="" class='iconfont icon-weibo'></a>
+                        <a href="" class='iconfont icon-weixin'></a>
+                        <a href="" class="iconfont icon-qq"></a>
+                    </div>
+                    <p>登录即同意慕课网 <a>《隐私政策》</a></p>
+                    <div class="erweima"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 注册 -->
+    <div id="registerBox">
+        <div class="loginMethods">
+            <span class='denglu'>快速注册</span>
+            <span class="glyphicon glyphicon-remove closeBox"></span>
+        </div>
+        <div>
+            <div class="input-items">
+                <form action="">
+                    <div class="zh rg">
+                        <div class="inputItem">
+                            <input type="tel" id='rgPhone' class="form-control loginput" required pattern="^\d{11}$"
+                                placeholder="请输入注册手机号" style='padding-left: 20px;'>
+                            <p class='validity'>请输入正确的手机号</p>
+                        </div>
+                        <div class="inputItem">
+                            <input type="text" id='rgYzm' required pattern="^[a-z0-9]{4}$"
+                                class="form-control loginput yzminput" placeholder="请输入短信验证码">
+                            <a href="" class='getMa'>获取验证码</a>
+                            <p class='validity'>请输入正确验证码</p>
+                        </div>
+                        <div class="inputItem">
+                            <input type="password" id='rgPsw' required pattern="(?!^[0-9]+$)(?!^[A-z]+$)^[^\s]{8,20}$"
+                                class="form-control loginput yzminput pswInput" placeholder="请输入8-20位字母数字或字符至少包含两种！">
+                            <a href="" class='iconfont icon-yanjing-guan getMa see'></a>
+                            <p class='validity'>请输入8-20位字母、数字或字符，至少包含两种！</p>
+                        </div>
+                        <div class="inputItem autoLG">
+                            <label for="autoLogin" class='autoLogin'>
+                                <input type="checkbox" name="" class="autoLogin1">同意慕课网<a href=""
+                                    class='Rxieyi'>《慕课网注册协议》</a><a href="">&</a><a class='Rxieyi'>《隐私政策》</a></label>
+                        </div>
+                        <div class="inputItem">
+                            <input type="submit" value="登录" id='loginBtn3' class='loginBtn' />
+                        </div>
+                    </div>
+
+                </form>
+
+                <div class="loginfooter">
+                    <a class="quickLg">
+                        快速注册
+                    </a>
+                    <span>
+                        其他方式登录
+                    </span>
+                    <div class="lgmd">
+                        <a href="" class='iconfont icon-weibo'></a>
+                        <a href="" class='iconfont icon-weixin'></a>
+                        <a href="" class="iconfont icon-qq"></a>
+                    </div>
+
+                    <div class="erweima"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container1">
+                <div>
+                    <ul class="nav1">
+                        <li><a href="">慕课网首页</a></li>
+                        <li><a href="">免费课</a></li>
+                        <li><a href="">实战课</a></li>
+                        <li><a href="">体系课</a></li>
+                        <li><a href="">慕课教程</a></li>
+                        <li><a href="">专栏</a></li>
+                        <li><a href="">手记</a></li>
+                    </ul>
+                    <div class="search">
+                        <div class="show_search">
+                            <input type="text" name="" id="search_input" placeholder="请输入关键字..." class="form-control">
+                            <div class="btndv">
+                                <a href="">Vue</a>
+                                <a href="">Python</a>
+                                <div class="btn">
+                                    <a href=""><i class="glyphicon glyphicon-search"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn" id='originBtn'>
+                            <a href=""><i class="glyphicon glyphicon-search"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="nav1 nav2">
+                        <li class="collection">
+                            <a href="">收藏网站</a>
+                            <p class="tips">使用<span>Ctrl+D</span>可将网站添加到书签</p>
+                        </li>
+                        <li class="cart-li"><a href="" class="
+                            glyphicon glyphicon-shopping-cart"></a>
+                            <div class="cart-box">
+                                <div class="topContent">
+                                    <span class='cart-title'>我的购物车</span>
+                                    <span class='joinNum'>已加入0门课程</span>
+                                </div>
+                                <div class="cart-content">
+                                    <div class="glyphicon glyphicon-shopping-cart"></div>
+                                    <p>购物车里空空如也</p>
+                                    <p class='pick'>快去这里选择你中意的课程</p>
+                                    <a href="" class='ke'>实战课</a>
+                                    <a href="" class='ke'>体系课</a>
+                                </div>
+                                <div class="cart-bottom">
+                                    <a class='Mycenter'>我的订单中心</a>
+                                    <a href="" class='goCart'>去购物车</a>
+                        </li>
+                        <li class='noLogin'>
+                            <a href="" class='login'>
+                                登录
+                            </a>
+                        </li>
+                        <span class='xiegang noLogin'>/</span>
+                        <li class='noLogin'>
+                            <a href="" id='register'>注册</a>
+                        </li>
+
+                        <!-- 登录后 -->
+                        <li class='already'><a href="" class="glyphicon glyphicon-bell bell"></a></li>
+                        <li class='already'><a href="" class='course'>我的课程</a></li>
+                        <li class="astar already"><a href="">
+                                <img src="./img/astar.jpg" alt="">
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class='mainBGC'>
+        <div class="cartHeader">
+            <div class="myCart">
+                <div>
+                    <h1>我的购物车</h1>
+                    <p>共2门,已选择2门</p>
+                </div>
+
+
+                <p>
+                    <a href="">我的订单历史</a>
+                </p>
+
+            </div>
+        </div>
+        <div class="cartBody">
+            <p class='noData'>
+                购物车内空空如也
+            </p>
+        </div>
+    </main>
+
+    <aside class='rightAside'>
+        <ul>
+            <li><a href="">
+                    <i class='glyphicon glyphicon-comment'></i>
+                    <span>意见反馈</span>
+                </a>
+            </li>
+            <li><a href="">
+                    <i class='glyphicon glyphicon-question-sign'></i>
+                    <span>帮助中心</span>
+                </a>
+            </li>
+            <li><a href="">
+                    <i class="
+    glyphicon glyphicon-phone"></i>
+                    <span>APP下载</span>
+                    <div class="AppDownLoad">
+                    </div>
+                </a>
+            </li>
+            <li><a href="">
+                    <i class='iconfont icon-weixin'></i>
+                    <span>官方微信</span>
+                    <div class="WeiXinGF">
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <footer>
+        <ul class='footerUL'>
+            <li><a href="">企业服务</a></li>
+            <li><a href="">关于我们</a></li>
+            <li><a href="">联系我们</a></li>
+            <li><a href="">讲师招募</a></li>
+            <li><a href="">帮助中心</a></li>
+            <li><a href="">意见反馈</a></li>
+            <li><a href="">慕课大学</a></li>
+            <li><a href="">代码托管</a></li>
+            <li><a href="">友情链接</a></li>
+        </ul>
+        <p>Copyright©&nbsp; 2021 imooc.com&nbsp;&nbsp; <a href=""> 京ICP备 12003892号-11 </a>&nbsp;<a href=""><img
+                    src="./img/beianicon.png" alt=""> &nbsp;京公网安备11010802030151号</a> &nbsp;<a href="">营业执照</a></p>
+        <div class="someLink">
+            <div><i class='iconfont icon-shoucang activeI'></i>
+                <p>收藏网站</p>
+                <div class='SCtips'>
+                    使用<b>Ctrl+D</b>可将网站添加到书签
+                </div>
+            </div>
+            <div><i class='iconfont icon-weixin'></i>
+                <p>官方公众号</p>
+                <div class='weixin'>
+
+                </div>
+            </div>
+            <div><i class='iconfont icon-weibo'></i>
+                <p>官方微博</p>
+            </div>
+            <div><i class='iconfont icon-qq'></i>
+                <p>官方空间</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <script src='./js/myCommon.js'></script>
+    <script src='./js/shoppingCart.js'></script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+header{
+    height: 64px;
+    line-height: 64px;
+}
+.navbar{
+    width: 1152px;
+    margin: 0 auto;
+}
+.cartHeader{
+    height: 160px;
+    background: url(../img/cart-header-bg.jpg);
+}
+
+.logo,.search,.nav1{
+    height: 64px;
+}
+
+.nav1{
+    justify-content: space-between;
+}
+
+.tips,.cart-box{
+    top: 64px;
+}
+
+.inputBox{
+    display: none;
+}
+
+#originBtn{
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    font-size: 21px;
+    z-index: 1;
+}
+
+.search{
+    position: relative;
+}
+
+.show_search{
+    position: absolute;
+    top: 0; 
+    left: 10px;
+    z-index: 0;
+    opacity: 0;
+}
+
+.show_search>input{
+    width: 260px;
+}
+
+.cart-li:hover .cart-box{
+    display: none;
+}
+
+.nav2{
+    width: 320px;
+}
+
+.myCart{
+    width: 1102px;
+    height: 160px;
+    margin: 0 auto;
+    overflow: hidden;
+    line-height: 114px;
+}
+
+.myCart>h1{
+    margin: 0;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 114px;
+    float: left;
+}
+
+.myCart>p{
+    float: right;
+}
+
+.myCart a{
+    color: #5e5e5e;
+}
+
+.myCart>p>a:hover{
+    color: #f01414;
+}
+
+.mainBGC{
+    background-color: #f8fafc;
+    min-height: 750px;
+}
+
+.cartBody{
+    width: 1152px;
+    height: 500px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 20px 30px;
+    position: relative;
+    top: -40px;
+    box-shadow: 0 8px 16px 0 rgb(7 17 27 / 10%);
+}
+
+.noData{
+    line-height: 400px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 4px;
+}
+
+.rightAside li:hover span{
+    display: block;
+    color: #f01414;
+}
