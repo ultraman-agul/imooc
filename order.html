@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>购物车_慕课网</title>
+    <title>确认订单_慕课网</title>
     <link rel="shortcut icon" href="./img/favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -13,18 +13,10 @@
     <link rel="stylesheet"
         href="https://at.alicdn.com/t/font_2493535_36bb35iahm9.css?spm=a313x.7781069.1998910419.46&file=font_2493535_36bb35iahm9.css">
     <link rel="stylesheet" href="./css/shoppingCart.css">
+    <link rel="stylesheet" href="./css/order.css">
 </head>
 
 <body>
-    <!-- 弹出层和弹出框 -->
-    <div id="popLayer">
-    </div>
-    <!-- 没勾选 -->
-    <div id="popBox">
-        <p>请选择你需要的课程</p>
-        <p><a href="" class='ok'>确定</a></p>
-    </div>
-
     <header>
         <nav class="navbar navbar-default">
             <div class="container1">
@@ -94,49 +86,32 @@
         <div class="cartHeader">
             <div class="myCart">
                 <div class='leftMyCart'>
-                    <h1>我的购物车</h1>
-                    <p class='selectNum'>共 <span id='courseNum'>2</span> 门,已选择 <span id='selectNum'>2</span> 门</p>
+                    <h1>确认订单</h1>
                 </div>
-
-
-                <p>
-                    <a href="">我的订单历史</a>
-                </p>
-
             </div>
         </div>
         <div class="cartBody">
             <p class='noData'>
                 购物车内空空如也
             </p>
-            <div class="trueCart">
-                <div class="cartheader">
-                    <div class="allSelect">
-                        <i class='iconfont icon-quanxuan-weixuanzhong'></i>
-                        全选
-                    </div>
-                    <div>
-                        课程
-                    </div>
-                    <div>
-                        金额
-                    </div>
-                    <div>
-                        操作
-                    </div>
+            <div class="cartheader">
+                <div class="spxx">
+                    商品信息
                 </div>
-                <div class="haveData">
-
-                </div>
-                <div class="cartFooter">
-                    <div class='rightSum'>
-                        <span class='labelSum'>总计金额</span>
-                        <span class='price'>￥0.00</span>
-                        <a href="" class='pay'>去结算</a>
-                    </div>
+                <div class='yiwen'>
+                    我有疑问，需要反馈?
                 </div>
             </div>
+            <div class="haveData">
 
+            </div>
+            <div class="cartFooter">
+                <div class='rightSum'>
+                    <span class='labelSum'>总计金额</span>
+                    <span class='price'>￥0.00</span>
+                    <a href="" class='pay'>去结算</a>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -207,7 +182,6 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
-    <script src='./js/shoppingCart.js'></script>
 </body>
 
 </html>
