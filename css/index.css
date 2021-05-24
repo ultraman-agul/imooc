@@ -6,6 +6,15 @@ body{
     min-width: 1200px;
 }
 
+a{
+    color: #1c1f21;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #1c1f21;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -1068,8 +1077,7 @@ aside{
     height: 2px;
     background-color: #E02020;
     display: block;
-    margin-left: 6px;
-    margin-top: -4px;
+    margin: -4px auto 0;
 }
 
 .newCourseItems{

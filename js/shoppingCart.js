@@ -148,9 +148,12 @@ pay.onclick = function (e) {
         layer.style.display = 'block';
         popBox.style.display = 'block';
     }
+    let boxArr = []
     for (let i = 0; i < xuanzhong.length; i++) {
         console.log(xuanzhong[i].getAttribute('index'))
+        boxArr.push(xuanzhong[i].getAttribute('index'))
     }
+    sessionStorage.setItem('boxArr', xuanzhong[i].getAttribute('index'))
 }
 
 let ok = document.querySelector('.ok')
