@@ -173,3 +173,65 @@
     margin-top: 30px;
     color:#93999f;
 }
+
+.pay-box{
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0 10px 10px 10px #93999f;
+    background-color: #fff;
+}
+
+.pay-inner{
+    width: 1150px;
+    margin: 0 auto;
+    line-height: 80px;
+}
+
+.money{
+    float: left;
+}
+
+.should-pay{
+    font-size: 22px;
+    color:#f01414;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.left-price ul{
+    float: left;
+    overflow: hidden;
+}
+
+.left-price ul li{
+    float: left;
+    margin: 0 10px;
+}
+
+.left-price ul li a{
+    display: inline-block;
+    line-height: 18px;
+    padding: 6px 12px;
+    text-align: center;
+    border-radius: 14px;
+    font-size: 12px;
+    color: #f01414;
+    border: 1px solid #f01414;
+}
+
+.right-commit{
+    float: right;
+}
+
+.right-commit a{
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #f01414;
+    color: #fff;
+    display: inline-block;
+    border-radius: 25px;
+}

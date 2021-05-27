@@ -147,18 +147,24 @@ pay.onclick = function (e) {
     if (xuanzhong.length === 0) {
         layer.style.display = 'block';
         popBox.style.display = 'block';
+        return;
     }
     let boxArr = []
     for (let i = 0; i < xuanzhong.length; i++) {
         console.log(xuanzhong[i].getAttribute('index'))
         boxArr.push(xuanzhong[i].getAttribute('index'))
     }
-    sessionStorage.setItem('boxArr', xuanzhong[i].getAttribute('index'))
+
+    let obj = {
+        tempArr: boxArr
+    }
+    sessionStorage.setItem('boxArr', JSON.stringify(obj))
+    window.location.href = '../order.html'
 }
 
 let ok = document.querySelector('.ok')
 ok.onclick = function (e) {
-    e.prevent()
+    e.preventDefault()
     layer.style.display = 'none'
     popBox.style.display = 'none'
 }
