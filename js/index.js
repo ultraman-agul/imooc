@@ -142,11 +142,13 @@ for (let i = 0; i < submitObj.length; i++) {
 }
 
 let imgs = document.querySelectorAll('.imgBox')
+let imgs1 = document.querySelectorAll('.imgBox1')
 let dots = document.querySelectorAll('.dotList>li')
 // 此函数不能传递index值，传递的值为固定值，出错
 function nextPic() {
     for (let i = 0; i < imgs.length; i++) {
         imgs[i].style.opacity = 0;
+        imgs1[i].style.opacity = 0;
         dots[i].classList.remove('currentDot')
     }
     index++
@@ -154,12 +156,14 @@ function nextPic() {
         index = 0
     }
     imgs[index].style.opacity = 1;
+    imgs1[index].style.opacity = 1;
     dots[index].classList.add('currentDot')
 }
 
 function prev() {
     for (let i = 0; i < imgs.length; i++) {
         imgs[i].style.opacity = 0;
+        imgs1[i].style.opacity = 0;
         dots[i].classList.remove('currentDot')
     }
     index--
@@ -167,6 +171,7 @@ function prev() {
         index = 5
     }
     imgs[index].style.opacity = 1;
+    imgs1[index].style.opacity = 1;
     dots[index].classList.add('currentDot')
 }
 
@@ -204,10 +209,12 @@ for (let i = 0; i < dots.length; i++) {
     dots[i].onclick = function () {
         for (let i = 0; i < imgs.length; i++) {
             imgs[i].style.opacity = 0;
+            imgs1[i].style.opacity = 0;
             dots[i].classList.remove('currentDot')
         }
         index = this.index
         imgs[index].style.opacity = 1;
+        imgs1[index].style.opacity = 1;
         dots[index].classList.add('currentDot')
     }
 }

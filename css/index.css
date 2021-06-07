@@ -585,30 +585,80 @@ header .navbar{
 }
 
 .imgBox:nth-child(1)>a{
-    background: url(../img/1.jpg) no-repeat 436px 30px, linear-gradient(to bottom, #ff9105, #fff 50%);
-    background-size: 900px 415px;
+    background: linear-gradient(to bottom, #ff9105, #fff 50%);
 }
 
 .imgBox:nth-child(2)>a{
-    background: url(../img/2.jpg) no-repeat 436px 30px, linear-gradient(to bottom, #daf1f8, #fff 50%);
-    background-size: 900px 415px;
+    background: linear-gradient(to bottom, #daf1f8, #fff 50%);
 }
 
 .imgBox:nth-child(3)>a{
-    background: url(../img/3.jpg) no-repeat 436px 30px, linear-gradient(to bottom, #f6a503, #fff 50%);
-    background-size: 900px 415px;
+    background: linear-gradient(to bottom, #f6a503, #fff 50%);
 }
 .imgBox:nth-child(4)>a{
-    background: url(../img/4.jpg) no-repeat 436px 30px, linear-gradient(to bottom, #2cacf3, #fff 50%);
-    background-size: 900px 415px;
+    background: linear-gradient(to bottom, #2cacf3, #fff 50%);
 }
 .imgBox:nth-child(5)>a{
-    background: url(../img/5.jpg) no-repeat 436px 30px, linear-gradient(to bottom, #00acff, #fff 50%);
-    background-size: 900px 415px;
+    background: linear-gradient(to bottom, #00acff, #fff 50%);
 }
 .imgBox:nth-child(6)>a{
-    background: url(../img/6.jpg) no-repeat 436px 30px, linear-gradient(to bottom, #c605fe, #fff 50%);
-    background-size: 900px 415px;
+    background: linear-gradient(to bottom, #c605fe, #fff 50%);
+}
+
+.bgImg1{
+    height: 100%;
+    position: relative;
+}
+.imgBox1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    transition: all 1s;
+}
+.imgBox1:nth-child(1)>a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: url(../img/1.jpg) no-repeat;
+    background-size: 100%;
+}
+.imgBox1:nth-child(2)>a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: url(../img/2.jpg) no-repeat;
+    background-size: 100%;
+}
+.imgBox1:nth-child(3)>a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: url(../img/3.jpg) no-repeat;
+    background-size: 100%;
+}
+.imgBox1:nth-child(4)>a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: url(../img/4.jpg) no-repeat;
+    background-size: 100%;
+}
+.imgBox1:nth-child(5)>a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: url(../img/5.jpg) no-repeat;
+    background-size: 100%;
+}
+.imgBox1:nth-child(6)>a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: url(../img/6.jpg) no-repeat;
+    background-size: 100%;
 }
 
 .bottomDot{
